@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "watch": "rm -rf dist && tsc --watch"
+    "watch": "rm -rf dist && tsc --watch",
+    "start": "NODE_ENV=development node ./dist/bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
