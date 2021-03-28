@@ -1,6 +1,7 @@
 // Natives module
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 // Modules
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +15,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { TopbarComponent } from './shared/components/topbar/topbar.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,7 @@ import { TopbarComponent } from './shared/components/topbar/topbar.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     LayoutModule
   ],
