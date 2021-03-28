@@ -7,12 +7,13 @@
 const app = require('../app');
 const debug = require('debug')('server:server');
 const http = require('http');
+const env = require(`../environment/${process.env.NODE_ENV}`);
 
 /**
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '7001');
+const port = normalizePort(env.port);
 app.set('port', port);
 
 /**
@@ -20,6 +21,7 @@ app.set('port', port);
  */
 
 const server = http.createServer(app);
+
 
 /**
  * Listen on provided port, on all network interfaces.
