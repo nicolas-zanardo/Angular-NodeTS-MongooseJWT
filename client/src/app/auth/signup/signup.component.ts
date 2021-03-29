@@ -36,7 +36,6 @@ export class SignupComponent implements OnInit {
         this.error = err.message;
       }
     );
-    console.log(this.form.value);
   }
 
 }

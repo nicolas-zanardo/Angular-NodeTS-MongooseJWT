@@ -5,7 +5,8 @@
     <span class="link" routerLink="/signin">Connexion</span>
     <span class="link" routerLink="/signup">Inscription</span>
   </span>
-  <span *ngIf="jwtToken?.isAuthenticated">
-    <span class="link" (click)="logout()">Déconnexion</span>
+  <span *ngIf="jwtToken?.isAuthenticated" fxLayoutGap="5px" fxLayoutAlign="center center">
+    <mat-icon class="link" routerLink="/profile" matTooltip="Votre Profile">person</mat-icon>
+    <mat-icon class="link" (click)="logout()" matTooltip="Déconnexion">power_settings_new</mat-icon>
   </span>
 </mat-toolbar>

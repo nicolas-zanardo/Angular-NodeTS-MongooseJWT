@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import {JwtToken} from "../../models/jwt-token.model";
 import {Subscription} from "rxjs";
@@ -7,7 +7,10 @@ import {Subscription} from "rxjs";
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.scss']
+  styleUrls: ['./topbar.component.scss'],
+  // Need to remove view encapsulation so that the custom tooltip style defined in
+  // `tooltip-custom-class-example.css` will not be scoped to this component's view.
+  encapsulation: ViewEncapsulation.None,
 })
 export class TopbarComponent implements OnInit, OnDestroy {
 

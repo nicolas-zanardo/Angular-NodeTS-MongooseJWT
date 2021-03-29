@@ -37,6 +37,5 @@ export class SigninComponent implements OnInit {
         }
       }
     );
-    console.log(this.form.value);
   }
 }
