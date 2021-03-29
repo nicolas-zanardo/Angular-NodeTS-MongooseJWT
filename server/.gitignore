@@ -48,3 +48,7 @@ Thumbs.db
 # Env
 src/environment/development.ts
 src/environment/production.ts
+
+# key
+key/key
+key/key.pub
